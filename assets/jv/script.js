@@ -1,5 +1,5 @@
 console.log("Live background running...");
 
 document.getElementById("enterButton").addEventListener("click", function () {
-  window.location.href = "mkiozne.html";
+  window.location.href = "https://mkxducks.github.io/VLOGS/mkiozne.html";
 });
