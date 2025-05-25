@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 40px 0 20px;
+  font-size: 3em;
+  color: #ff4081;
+}
+
+.vlog-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.vlog-links a {
+  text-decoration: none;
+  color: white;
+  background: #222;
+  border: 1px solid #555;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.vlog-links a:hover {
+  background: #ff4081;
+  color: white;
+}
