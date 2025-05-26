@@ -9,5 +9,6 @@
 ## 📸 Preview
 
 <!-- Optionally insert a screenshot or demo GIF -->
-![CYBERSECURITY]([video](background5.mp4)
+![CYBERSECURITY]([image](![image](https://github.com/user-attachments/assets/0b7371ca-362e-427d-a466-59d020965cd0)
+)
 )
