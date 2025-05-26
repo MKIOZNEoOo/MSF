@@ -1,6 +1,6 @@
 # 🌟 MKIOZNE SECRET FILE
 
->  I ALWAYS WATCHING YOU !!! 👀 .
+>  I'M ALWAYS WATCHING YOU !!! 👀 .
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)
