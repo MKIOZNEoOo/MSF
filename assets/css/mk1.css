@@ -13,11 +13,18 @@ body {
 
 h1 {
   margin: 40px 0 20px;
-  font-size: 3em;
+  font-size: 3em ;
   color: #ff4081;
-  text-align: center;
+  text-align:left;
   animation: slideInDown 1s ease-out;
 }
+.title-container h1 i {
+  margin-right: 10px;
+  font-size: 0.9em;
+  color: #00ffe7;
+  text-shadow: 0 0 5px #00ffe7;
+}
+
 
 .toggle-btn {
   background: rgba(255, 255, 255, 0.1);
