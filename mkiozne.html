@@ -9,8 +9,11 @@
 </head>
 <body>
   <h1><span>👾</span> MKIOZNE SECRET FILE <span>👾</span></h1>
-  <div class="vlog-links">
-    <a href="https://www.facebook.com/" target="_blank">
+
+  <button class="toggle-btn" onclick="toggleLinks()">💠 OPEN SOCIAL MEDIA</button>
+
+  <div class="vlog-links" id="socialLinks">
+    <a href="https://www.facebook.com/jethlopezcaronan" target="_blank">
       <i class="fab fa-facebook-f"></i> Facebook
     </a>
     <a href="https://www.instagram.com/" target="_blank">
@@ -23,13 +26,35 @@
       <i class="fab fa-github"></i> GitHub
     </a>
     <a href="https://web.telegram.org/" target="_blank">
-      <i class="fab fa-telegram"></i> Twitter
+      <i class="fab fa-telegram"></i> Telegram
     </a>
     <a href="https://linkedin.com/" target="_blank">
       <i class="fab fa-linkedin-in"></i> LinkedIn
-
-    <a href="file1.docx"target="font-awesome">CREATE PROJECT - FILE 1</a>
     </a>
+    
   </div>
+
+      <button class="toggle-btn" onclick="toggleFiles()">💠 OPEN SECRET FILES</button>
+    
+      <div class="vlog-links" id="Secret-files">
+
+    <a href="file1.docx" target="_blank">
+      <i class="fas fa-file-word"></i> CREATE PROJECT - FILE 1
+    </a>
+    </div>
+  
+  
+  <script>
+
+function toggleFiles() {
+      const links = document.getElementById('Secret-files');
+      links.classList.toggle('show');
+    }
+
+    function toggleLinks() {
+      const links = document.getElementById('socialLinks');
+      links.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
