@@ -1,4 +1,4 @@
-# [MKIOZNE SECRET FILES] — Code | Hack | Guide
+# [MK - Secret - files] — Code | Hack | Guide
 
 > **"I'm not just coding. I'm decoding the system."**  
 > **Welcome to the shadows of tech. I’m always watching you.**
