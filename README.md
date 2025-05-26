@@ -15,7 +15,7 @@
 
 ## 🧠 Who Am I?
 
-**`mkiozne`** is not just a name—it's a signal.  
+**`sEc_MK`** is not just a name—it's a signal.  
 This channel is where **code meets chaos**, and **knowledge becomes a weapon**.
 
 - Penetrate systems (legally)
@@ -51,9 +51,7 @@ This channel is where **code meets chaos**, and **knowledge becomes a weapon**.
 
 ```bash
 # Clone the secrets
-git clone https://github.com/mkiozne/mkiozne-secret-file.git
-cd mkiozne-secret-file
+soon!
 
-# Run like a ghost
-chmod +x cloak.sh
-./cloak.sh --stealth
+# Run like aghostt
+soon!
