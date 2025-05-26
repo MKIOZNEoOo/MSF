@@ -18,13 +18,14 @@
 
 **`sEc_MK`** is not just a name—it's a signal.  
 This channel is where **code meets chaos**, and **knowledge becomes a weapon**.
-
+- Free Programming code by me
 - Penetrate systems (legally)
 - Build powerful CLI tools
-- Learn deep OS-level coding (C/C++/Assembly)
+- Learn deep OS-level coding (C/C++/python/Assembly)
 - Reverse engineer like a phantom
 - Master ethical hacking
 - Crack the surface of real cybersecurity
+
 
 ---
 
