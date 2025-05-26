@@ -1,5 +1,5 @@
 # [MK - Secret - files] 
- Code | Hack | Guide
+ Codes | Geek | Guide | Debug | Advance 
 
 > **"I'm not just coding. I'm decoding the system."**  
 > **Welcome to the shadows of tech. I’m always watching you.**
