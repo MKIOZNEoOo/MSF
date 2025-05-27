@@ -93,7 +93,7 @@ body {
 
 /* Toggle button in light mode: dark background, white text */
 body.light-mode .mode-toggle {
-  background: #111;
+  background: #000;   /* Change from #111 to #000 for pure black */
   color: #fff;
 }
 
@@ -128,6 +128,16 @@ body:not(.light-mode) .mode-toggle i {
   height: 4px;
   background: #fff;
   border-radius: 2px;
+}
+
+/* Hamburger lines: black in light mode */
+body.light-mode .hamburger span {
+  background: #000;
+}
+
+/* Hamburger lines: white in dark mode (default) */
+body:not(.light-mode) .hamburger span {
+  background: #fff;
 }
 
 .hamburger.active span:nth-child(1) {
