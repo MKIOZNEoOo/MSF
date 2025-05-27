@@ -11,8 +11,17 @@
   <header class="main-header">
     <div class="container">
       <div class="logo-text">MKIOZNE SECRET FILE</div>
-      
       <div class="top-right-menu">
+        <a href="#contact-us" class="header-link">Contact Us</a>
+        <a href="#" class="header-link">Links</a>
+        <a href="#" class="header-link">Platform</a>
+        <a href="#" class="header-link">Community</a>
+        <a href="#" class="header-link">Follow Us</a>
+        <a href="#" class="header-link">Policies</a>
+        <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
+          <i id="modeIconBottom" class="fas fa-moon"></i>
+          <span id="modeText">Dark</span>
+        </button>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
           <span></span>
           <span></span>
@@ -24,8 +33,7 @@
           <a href="#">Profile</a>
           <a href="#">About</a>
           <a href="#contact-us">Contact Us</a>
-        </div class="center-mode-dark-light-mode">
-        
+        </div>
       </div>
     </div>
   </header>
@@ -54,48 +62,38 @@
         <p>Access is restricted to authorized users only. Please ensure your credentials are kept safe and private.</p>
       </div>
     </div>
-  
-    <div class="info-sections-container">
-      <div class="centered-mode-toggle">
-  
-</div>
-<div class="centered-mode-toggle-button">
-
- 
-</div>
-  <div class="info-card">
-    <h2>Contact Us</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: +1234567890</p>
+    <!-- Vlog-style containers end -->
+<!-- ...existing code... -->
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-item">
+      <h3>Contact Me</h3>
+      <p>Email: your@email.com</p>
+      <p>Phone: +1234567890</p>
+    </div>
+    <div class="footer-item">
+      <h3>Links</h3>
+      <p>Stay tuned</p>
+    </div>
+    <div class="footer-item">
+      <h3>Platform</h3>
+      <p>Stay tuned</p>
+    </div>
+    <div class="footer-item">
+      <h3>Community</h3>
+      <p>Stay tuned</p>
+    </div>
+    <div class="footer-item">
+      <h3>Follow Me</h3>
+      <p>Stay tuned</p>
+    </div>
+    <div class="footer-item">
+      <h3>Policies</h3>
+      <p>Stay tuned</p>
+    </div>
   </div>
-  <div class="info-card">
-    <h2>Links</h2>
-    <p>Source</p>
-  </div>
-  <div class="info-card">
-    <h2>Platform</h2>
-    <p>Stay tuned</p>
-  </div>
-    <div class="info-card">
-
- <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
-    <i id="modeIconBottom" class="fas fa-moon"></i>
-    <span id="modeText">Dark</span>
-  </button>
-  </div>
-  <div class="info-card">
-    <h2>Community</h2>
-    <p>Stay tuned</p>
-  </div>
-  <div class="info-card">
-    <h2>Follow Us</h2>
-    <p>Stay tuned</p>
-  </div>
-  <div class="info-card">
-    <h2>Policies</h2>
-    <p>Stay tuned</p>
-  </div>
-</div>
+</footer>
+<!-- ...existing code... -->
   </main>
 
   <script>
@@ -111,7 +109,6 @@
     }
   }
 
-  
   function toggleMode() {
     const body = document.body;
     const iconTop = document.getElementById('modeIcon');
@@ -128,6 +125,6 @@
       if (modeText) { modeText.textContent = "Dark"; }
     }
   }
-</script>
+  </script>
 </body>
 </html>
