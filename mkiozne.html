@@ -13,13 +13,51 @@
       <div class="logo-text">
         <a href="mkiozne.html" style="text-decoration:none; color:inherit;">MKIOZNEジ</a>
       </div>
-      <div class="top-right-menu">
-        <a href="mkiozne.html" class="header-link">HOME</a>
-        <a href="#" class="header-link">BLOG</a>
-        <a href="#" class="header-link">PLATFORM</a>
-        <a href="#" class="header-link">GET FILE</a>
-        <a href="#" class="header-link">DOCUMENTS</a>
-        <a href="#" class="header-link">OTHERS</a>
+      <!-- Example header navigation with dropdowns -->
+      <nav class="top-right-menu">
+        <div class="dropdown">
+          <a href="mkiozne.html" class="header-link">HOME</a>
+          <div class="dropdown-content">
+            <a href="#">Sub Home 1</a>
+            <a href="#">Sub Home 2</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="header-link">BLOG</a>
+          <div class="dropdown-content">
+            <a href="#">Latest Posts</a>
+            <a href="#">Categories</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="header-link">PLATFORM</a>
+          <div class="dropdown-content">
+            <a href="#">Windows</a>
+            <a href="#">Linux</a>
+            <a href="#">Mac</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="header-link">GET FILE</a>
+          <div class="dropdown-content">
+            <a href="#">Download</a>
+            <a href="#">Upload</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="header-link">DOCUMENTS</a>
+          <div class="dropdown-content">
+            <a href="#">Guides</a>
+            <a href="#">API Docs</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="header-link">OTHERS</a>
+          <div class="dropdown-content">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
         <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
           <i id="modeIconBottom" class="fas fa-moon"></i>
         </button>
@@ -35,7 +73,7 @@
           <a href="#">About</a>
           <a href="#">Contact me</a>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 

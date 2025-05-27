@@ -250,6 +250,16 @@ body:not(.light-mode) .hamburger span {
   background-color: var(--dropdown-hover);
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
 /* =========================
    Main Section & Vlog Cards
    ========================= */

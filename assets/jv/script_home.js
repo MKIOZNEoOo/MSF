@@ -35,3 +35,12 @@ window.addEventListener('scroll', function() {
   }
   lastScrollY = window.scrollY;
 });
+
+
+// Add toggle effect to header links
+document.querySelectorAll('.menu-toggle-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent navigation for demo; remove if you want navigation
+    toggleMenu();
+  });
+});
