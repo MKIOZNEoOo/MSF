@@ -120,12 +120,28 @@
     </div>
   </header>
   <span class="hero-title">MKIOZNE</span>
+  <button class="scroll-down-arrow" onclick="scrollToNextSection()" aria-label="Scroll down">
+  <span>&#x25BC;</span> <!-- Unicode down arrow ▼ -->
+</button>
 </div>
   <main>
-  <main>
-    <section class="main-section">
+    <section class="main-section" id="welcome-section">
       <h1>Welcome To My Secret File</h1>
       <p>File Coming Soon.</p>
+
+      <div class="video-content-box">
+        <!-- Example video embed (replace src with your video link) -->
+        <div class="video-wrapper">
+          <!-- <iframe src="your-video-link" frameborder="0" allowfullscreen></iframe> -->
+          <p style="color:#888;">[Your video goes here]</p>
+        </div>
+        <div class="video-description">
+          <h2>Video Description</h2>
+          <p>
+            Put your video description or any other content here.
+          </p>
+        </div>
+      </div>
     </section>
 
     <div class="vlog-cards-container">
@@ -178,7 +194,6 @@
       </div>
     </footer>
   </main>
-
   <script src="assets/jv/script_home.js"></script>
   <script src="assets/jv/design.js"></script>
 </body>

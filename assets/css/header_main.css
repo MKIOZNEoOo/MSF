@@ -213,3 +213,27 @@
   color: var(--header-text, #fff);
   margin-left: 4px;
 }
+
+.scroll-down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5em;
+  color: #fff;
+  transition: transform 0.2s;
+  animation: bounce 1.5s infinite;
+}
+
+.scroll-down-arrow:hover {
+  transform: translateY(8px) scale(1.1);
+  color: var(--primary-color, #5999ff);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(12px);}
+}

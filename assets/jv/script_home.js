@@ -87,3 +87,10 @@ document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
     parent.classList.toggle('open');
   });
 });
+
+function scrollToNextSection() {
+  const nextSection = document.getElementById('welcome-section');
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
