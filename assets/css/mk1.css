@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #367BF0;
+  --primary-color: #5999ff;
   --header-bg: #16171d;
   --header-bg-light: #e3f0ff; /* light blue */
   --header-text: #fff;
@@ -96,25 +96,23 @@ body {
 
 /* Toggle button base style */
 .mode-toggle {
-  background: #333;
-  border-radius: 20px;
-  position: relative;
-  width: 60px;
-  height: 30px;
+  background: #eee;
   border: none;
+  border-radius: 20px;
+  width: 48px;
+  height: 26px;
   cursor: pointer;
-  color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 8px;
-  transition: background 0.4s, color 0.4s;
+  position: relative;
+  transition: background 0.3s;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Toggle button in light mode: dark background, white text */
 body.light-mode .mode-toggle {
-  background: #000;   /* Change from #111 to #000 for pure black */
-  color: #fff;
+  background: var(--primary-color);
 }
 
 /* Toggle button in dark mode: light background, black text */
@@ -126,6 +124,28 @@ body:not(.light-mode) .mode-toggle {
 body:not(.light-mode) .mode-toggle span,
 body:not(.light-mode) .mode-toggle i {
   color: #222;
+}
+
+.mode-toggle:hover {
+  background: #ccc;
+}
+
+.mode-toggle i {
+  position: absolute;
+  left: 4px;
+  font-size: 1em;
+  color: #222;
+  transition: left 0.3s cubic-bezier(.4,2.08,.55,.44), color 0.3s;
+}
+
+body.light-mode .mode-toggle i {
+  left: 24px;
+  color: #fff;
+}
+
+/* Optional: subtle shadow for the switch */
+.mode-toggle {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .hamburger {

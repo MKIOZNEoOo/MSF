@@ -7,20 +7,19 @@
   <link rel="stylesheet" href="assets/css/mk1.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body>
+<body class="light-mode">
   <header class="main-header">
     <div class="container">
-      <div class="logo-text">MSF</div>
+      <div class="logo-text">MKIOZNEジ</div>
       <div class="top-right-menu">
-        <a href="#contact-us" class="header-link">Contact Me</a>
+        <a href="#contact-us" class="header-link">CONTACT ME</a>
         <a href="#" class="header-link">BLOG</a>
-        <a href="#" class="header-link">Platform</a>
-        <a href="#" class="header-link">Community</a>
-        <a href="#" class="header-link">Follow Us</a>
-        <a href="#" class="header-link">Policies</a>
+        <a href="#" class="header-link">PLATFORM </a>
+        <a href="#" class="header-link">COMMUNITY</a>
+        <a href="#" class="header-link">FOLLOW ME</a>
+        <a href="#" class="header-link">POLICIES</a>
         <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
           <i id="modeIconBottom" class="fas fa-moon"></i>
-          <span id="modeText">  Dark</span>
         </button>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
           <span></span>
@@ -63,7 +62,6 @@
       </div>
     </div>
     <!-- Vlog-style containers end -->
-<!-- ...existing code... -->
 <footer class="main-footer">
   <div class="footer-container">
     <div class="footer-item">
@@ -97,32 +95,26 @@
   </main>
 
   <script>
-  function toggleMenu() {
-    document.getElementById('dropdownMenu').classList.toggle('show');
-  }
-  window.onclick = function(event) {
-    if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
-      var dropdown = document.getElementById('dropdownMenu');
-      if (dropdown && dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-      }
+function toggleMenu() {
+  document.getElementById('dropdownMenu').classList.toggle('show');
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
+    var dropdown = document.getElementById('dropdownMenu');
+    if (dropdown && dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
     }
   }
+}
 
-  function toggleMode() {
+function toggleMode() {
   const body = document.body;
-  const iconTop = document.getElementById('modeIcon');
   const iconBottom = document.getElementById('modeIconBottom');
-  const modeText = document.getElementById('modeText');
   body.classList.toggle('light-mode');
   if (body.classList.contains('light-mode')) {
-    if (iconTop) { iconTop.classList.remove('fa-moon'); iconTop.classList.add('fa-sun'); }
     if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
-    if (modeText) { modeText.textContent = " Dark"; }
   } else {
-    if (iconTop) { iconTop.classList.remove('fa-sun'); iconTop.classList.add('fa-moon'); }
     if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
-    if (modeText) { modeText.textContent = " Light"; }
   }
 }
   </script>
