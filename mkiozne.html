@@ -13,14 +13,14 @@
       <div class="logo-text">MSF</div>
       <div class="top-right-menu">
         <a href="#contact-us" class="header-link">Contact Me</a>
-        <a href="#" class="header-link">Links</a>
+        <a href="#" class="header-link">BLOG</a>
         <a href="#" class="header-link">Platform</a>
         <a href="#" class="header-link">Community</a>
         <a href="#" class="header-link">Follow Us</a>
         <a href="#" class="header-link">Policies</a>
         <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
           <i id="modeIconBottom" class="fas fa-moon"></i>
-          <span id="modeText">Dark</span>
+          <span id="modeText">  Dark</span>
         </button>
         <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
           <span></span>
@@ -32,7 +32,7 @@
           <a href="#">Account</a>
           <a href="#">Profile</a>
           <a href="#">About</a>
-          <a href="#contact-us">Contact Us</a>
+          <a href="#">Contact me</a>
         </div>
       </div>
     </div>
@@ -118,11 +118,11 @@
   if (body.classList.contains('light-mode')) {
     if (iconTop) { iconTop.classList.remove('fa-moon'); iconTop.classList.add('fa-sun'); }
     if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
-    if (modeText) { modeText.textContent = "Dark"; }
+    if (modeText) { modeText.textContent = " Dark"; }
   } else {
     if (iconTop) { iconTop.classList.remove('fa-sun'); iconTop.classList.add('fa-moon'); }
     if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
-    if (modeText) { modeText.textContent = "Light"; }
+    if (modeText) { modeText.textContent = " Light"; }
   }
 }
   </script>
