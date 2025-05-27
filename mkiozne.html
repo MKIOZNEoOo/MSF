@@ -4,81 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MY SECRET FILE</title>
-  <link rel="stylesheet" href="assets/css/color_mkiozne.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/background_main.css">
+  <link rel="stylesheet" href="assets/css/header_main.css">
+  <link rel="stylesheet" href="assets/css/down_toggle_main.css">
+  <link rel="stylesheet" href="assets/css/text_main.css">
+  <link rel="stylesheet" href="assets/css/footer_main.css">
+  <link rel="stylesheet" href="assets/css/side_bar_main.css">
 </head>
-s<body class="light-mode">
+<body class="light-mode">
+  <div class="hero-section">
   <header class="main-header">
     <div class="container">
       <div class="logo-text">
         <a href="mkiozne.html" style="text-decoration:none; color:inherit;">MKIOZNEジ</a>
       </div>
-      <!-- Example header navigation with dropdowns -->
       <nav class="top-right-menu">
-  <div class="desktop-menu">
-    <a href="mkiozne.html" class="header-link">HOME</a>
-    <div class="dropdown">
-      <a href="#" class="header-link">BLOG</a>
-      <div class="dropdown-content">
-        <a href="#">Latest Posts</a>
-        <a href="#">Categories</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a href="#" class="header-link">PLATFORM</a>
-      <div class="dropdown-content">
-        <a href="#">Windows</a>
-        <a href="#">Linux</a>
-        <a href="#">Mac</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a href="#" class="header-link">GET FILE</a>
-      <div class="dropdown-content">
-        <a href="#">Download</a>
-        <a href="#">Upload</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a href="#" class="header-link">DOCUMENTS</a>
-      <div class="dropdown-content">
-        <a href="#">Guides</a>
-        <a href="#">API Docs</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <a href="#" class="header-link">OTHERS</a>
-      <div class="dropdown-content">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </div>
-    <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
-      <i id="modeIconBottom" class="fas fa-moon"></i>
-    </button>
-  </div>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="mobile-sidebar" id="mobileSidebar">
-    <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
-    <a href="mkiozne.html">HOME</a>
-    <a href="#">BLOG</a>
-    <a href="#">PLATFORM</a>
-    <a href="#">GET FILE</a>
-    <a href="#">DOCUMENTS</a>
-    <a href="#">OTHERS</a>
-    <button class="mode-toggle mobile-mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode" style="margin: 24px 32px 0 32px; display: flex; align-items: center;">
-      <i id="modeIconMobile" class="fas fa-moon"></i>
-    </button>
-  </div>
-  <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMenu()"></div>
-</nav>
+        <div class="desktop-menu">
+          <a href="mkiozne.html" class="header-link">HOME</a>
+          <div class="dropdown">
+            <a href="#" class="header-link">BLOG</a>
+            <div class="dropdown-content">
+              <a href="#">Latest Posts</a>
+              <a href="#">Categories</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="header-link">PLATFORM</a>
+            <div class="dropdown-content">
+              <a href="#">Windows</a>
+              <a href="#">Linux</a>
+              <a href="#">Mac</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="header-link">GET FILE</a>
+            <div class="dropdown-content">
+              <a href="#">Download</a>
+              <a href="#">Upload</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="header-link">DOCUMENTS</a>
+            <div class="dropdown-content">
+              <a href="#">Guides</a>
+              <a href="#">API Docs</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="header-link">OTHERS</a>
+            <div class="dropdown-content">
+              <a href="#">About</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <!-- Desktop Switch -->
+<label class="switch mode-toggle" aria-label="Toggle light/dark mode">
+  <input type="checkbox" id="modeSwitch" onchange="toggleMode()" />
+  <span class="slider"></span>
+  <i id="modeIconBottom" class="fas fa-moon"></i>
+</label>
+        </div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="mobile-sidebar" id="mobileSidebar">
+          <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
+          <a href="mkiozne.html">HOME</a>
+          <a href="#">BLOG</a>
+          <a href="#">PLATFORM</a>
+          <a href="#">GET FILE</a>
+          <a href="#">DOCUMENTS</a>
+          <a href="#">OTHERS</a>
+          <!-- Mobile Switch (inside .mobile-sidebar) -->
+<label class="switch mode-toggle mobile-mode-toggle" aria-label="Toggle light/dark mode" style="margin: 24px 32px 0 32px;">
+  <input type="checkbox" id="modeSwitchMobile" onchange="toggleMode()" />
+  <span class="slider"></span>
+  <i id="modeIconMobile" class="fas fa-moon"></i>
+</label>
+        </div>
+        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMenu()"></div>
+      </nav>
     </div>
   </header>
-
+  <span class="hero-title">MKIOZNE</span>
+</div>
+  <main>
   <main>
     <section class="main-section">
       <h1>Welcome To My Secret File</h1>

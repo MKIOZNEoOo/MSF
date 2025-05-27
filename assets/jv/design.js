@@ -57,4 +57,4 @@ function toggleMode() {
 document.addEventListener('DOMContentLoaded', function() {
   const savedMode = localStorage.getItem('mode') || 'light';
   setMode(savedMode);
-});
+}); 

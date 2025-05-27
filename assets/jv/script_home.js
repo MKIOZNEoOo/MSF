@@ -1,27 +1,45 @@
 function toggleMenu() {
-  document.getElementById('dropdownMenu').classList.toggle('show');
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  sidebar.classList.toggle('show');
+  overlay.classList.toggle('show');
 }
 
-function toggleMode() {
+function setMode(mode) {
   const body = document.body;
-  const iconBottom = document.getElementById('modeIconBottom');
-  const isLight = body.classList.contains('light-mode');
-  if (isLight) {
+  const iconMobile = document.getElementById('modeIconMobile');
+  const iconDesktop = document.getElementById('modeIconBottom');
+  const switchDesktop = document.getElementById('modeSwitch');
+  const switchMobile = document.getElementById('modeSwitchMobile');
+  if (mode === 'dark') {
     body.classList.remove('light-mode');
     body.classList.add('dark-mode');
-    if (iconBottom) {
-      iconBottom.classList.remove('fa-sun');
-      iconBottom.classList.add('fa-moon');
-    }
+    if (iconMobile) iconMobile.className = 'fas fa-moon';
+    if (iconDesktop) iconDesktop.className = 'fas fa-moon';
+    if (switchDesktop) switchDesktop.checked = true;
+    if (switchMobile) switchMobile.checked = true;
   } else {
     body.classList.remove('dark-mode');
     body.classList.add('light-mode');
-    if (iconBottom) {
-      iconBottom.classList.remove('fa-moon');
-      iconBottom.classList.add('fa-sun');
-    }
+    if (iconMobile) iconMobile.className = 'fas fa-sun';
+    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
+    if (switchDesktop) switchDesktop.checked = false;
+    if (switchMobile) switchMobile.checked = false;
   }
 }
+
+function toggleMode() {
+  const isLight = document.body.classList.contains('light-mode');
+  const mode = isLight ? 'dark' : 'light';
+  localStorage.setItem('mode', mode);
+  setMode(mode);
+}
+
+// On page load, set mode from localStorage if available
+document.addEventListener('DOMContentLoaded', function() {
+  const savedMode = localStorage.getItem('mode') || 'light';
+  setMode(savedMode);
+});
 
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.main-header');

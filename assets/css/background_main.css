@@ -1,0 +1,38 @@
+/* =========================
+   Root Variables & Backgrounds
+   ========================= */
+:root {
+  --primary-color: #5999ff;
+  --header-bg: #16171d;
+  --header-bg-light: #e3f0ff;
+  --header-text: #fff;
+  --main-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --main-bg-light: #e3f0ff;
+  --text-light: #222;
+  --text-dark: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif;
+  background: var(--main-bg);
+  color: var(--header-text);
+  min-height: 100vh;
+}
+
+body.light-mode {
+  --header-bg: #e3f0ff;
+  --header-text: #222;
+  --primary-color: #5999ff;
+  background: #e3f0ff;
+  color: #222;
+}
+
+body.dark-mode {
+  --header-bg: #16171d;
+  --header-text: #fff;
+  --primary-color: #5999ff;
+  background: #16171d;
+  color: #fff;
+}

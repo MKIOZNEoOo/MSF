@@ -1,0 +1,70 @@
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;           /* Set left: 0 */
+  right: auto;        /* Remove right: 0 */
+  bottom: 0;
+  width: 260px;
+  background: var(--header-bg, #16171d);
+  color: var(--header-text, #fff);
+  z-index: 300;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.2); /* Positive for left side shadow */
+  transition: transform 0.3s;
+  transform: translateX(-100%);           /* Slide in from the left */
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mobile-sidebar.show {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
+.mobile-sidebar a,
+.mobile-sidebar button.mode-toggle {
+  color: var(--header-text, #fff);
+  text-decoration: none;
+  padding: 16px 32px;
+  font-size: 1.1em;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  display: block;
+  transition: background 0.2s;
+}
+
+.mobile-sidebar a:hover,
+.mobile-sidebar button.mode-toggle:hover {
+  background: rgba(89,153,255,0.08);
+  color: var(--primary-color, #5999ff);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--header-text, #fff);
+  font-size: 2em;
+  position: absolute;
+  top: 10px; right: 16px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 299;
+  transition: opacity 0.3s;
+}
+
+.sidebar-overlay.show {
+  display: block;
+  opacity: 1;
+}
