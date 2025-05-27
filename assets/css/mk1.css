@@ -40,7 +40,7 @@ body {
   top: 0;
   left: 0;
   z-index: 200;
-  transition: background 0.4s;
+  transition: background 0.4s, top 0.4s;
 }
 
 .container {
@@ -58,6 +58,24 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   color: var(--primary-color);
+}
+
+/* Responsive: hide header when scrolling down, show when scrolling up */
+@media (pointer: coarse) {
+  body {
+    --scroll-behavior: smooth;
+  }
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    transition: top 0.4s;
+  }
+  .header-hide {
+    top: -100px;
+  }
 }
 
 /* =========================
