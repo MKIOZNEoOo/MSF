@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #81afff;
+  --primary-color: #367BF0;
   --header-bg: #16171d;
-  --header-bg-light: #FFFDE7; /* super light yellow */
+  --header-bg-light: #e3f0ff; /* light blue */
   --header-text: #fff;
   --main-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  --main-bg-light: #FFFDE7; /* super light yellow */
-  --text-light: #000;
+  --main-bg-light: #e3f0ff; /* light blue */
+  --text-light: #222;
   --text-dark: #fff;
 }
 
@@ -56,6 +56,26 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+/* Responsive: horizontally scrollable header links on mobile */
+@media (max-width: 700px) {
+  .top-right-menu {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    max-width: 100vw;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+  .top-right-menu::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  .header-link,
+  .mode-toggle,
+  .hamburger {
+    flex: 0 0 auto;
+  }
 }
 
 .header-link {
@@ -116,7 +136,7 @@ body:not(.light-mode) .mode-toggle i {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; 
   gap: 6px;
   padding: 0;
   z-index: 201;
@@ -209,6 +229,13 @@ body:not(.light-mode) .hamburger span {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
+body.light-mode .vlog-card {
+  background: #fff;
+  color: #222;
+  border: 2px solid #b3d8fd;
+}
+
 
 /* DARK MODE */
 body.dark-mode {
@@ -303,23 +330,71 @@ body.light-mode {
 
 body.light-mode .main-header,
 body.light-mode .main-footer {
-  background: var(--header-bg-light);
-  color: var(--text-light);
+  background: #111 !important;
+  color: #fff !important;
 }
 
 body.light-mode .logo-text,
 body.light-mode .header-link,
 body.light-mode .footer-item h3,
 body.light-mode .footer-item p {
-  color: var(--text-light);
+  color: var(--primary-color);
 }
 
+/* Vlog cards in light mode: white with blue border */
 body.light-mode .vlog-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: #fff;
   color: #222;
+  border: 2px solid #b3d8fd;
 }
 
+/* Header link hover in light mode: blue background, white text */
 body.light-mode .header-link:hover {
-  background: rgba(0,0,0,0.07);
-  color: #222;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Toggle button in light mode: blue background, white text */
+body.light-mode .mode-toggle {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* Hamburger lines: blue in light mode */
+body.light-mode .hamburger span {
+  background: var(--primary-color);
+}
+
+/* Dropdown menu in light mode: blue background, white text */
+body.light-mode .dropdown-content {
+  background-color: #b3d8fd !important;
+}
+
+body.light-mode .dropdown-content a {
+  color: #222 !important;
+}
+
+body.light-mode .dropdown-content a:hover {
+  background-color: #367BF0 !important;
+  color: #fff !important;
+}
+
+body.light-mode .main-footer {
+  background: #fff !important;
+  color: #174ea6 !important; /* dark blue text */
+}
+
+body.light-mode .footer-item h3,
+body.light-mode .footer-item p {
+  color: #174ea6 !important; /* dark blue for all footer text */
+}
+
+body.light-mode .main-header {
+  background: #fff !important;
+  color: #174ea6 !important;
+}
+
+body.light-mode .logo-text,
+body.light-mode .header-link {
+  color: #174ea6 !important;
 }
