@@ -14,12 +14,12 @@
         <a href="mkiozne.html" style="text-decoration:none; color:inherit;">MKIOZNEジ</a>
       </div>
       <div class="top-right-menu">
-        <a href="#contact-us" class="header-link">CONTACT ME</a>
+        <a href="mkiozne.html" class="header-link">HOME</a>
         <a href="#" class="header-link">BLOG</a>
-        <a href="#" class="header-link">PLATFORM </a>
-        <a href="#" class="header-link">COMMUNITY</a>
-        <a href="#" class="header-link">FOLLOW ME</a>
-        <a href="#" class="header-link">POLICIES</a>
+        <a href="#" class="header-link">PLATFORM</a>
+        <a href="#" class="header-link">GET FILE</a>
+        <a href="#" class="header-link">DOCUMENTS</a>
+        <a href="#" class="header-link">OTHERS</a>
         <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
           <i id="modeIconBottom" class="fas fa-moon"></i>
         </button>
@@ -45,80 +45,75 @@
       <p>File Coming Soon.</p>
     </section>
 
-    <!-- Vlog-style containers start -->
     <div class="vlog-cards-container">
-      <!-- Layer 1: About -->
       <div class="vlog-card">
         <h3>What is this website about?</h3>
         <p>No Info</p>
       </div>
-      <!-- Layer 2: Source of File -->
       <div class="vlog-card">
         <h3>Source of File</h3>
         <p>No Info</p>
       </div>
-      <!-- Layer 3: Only -->
       <div class="vlog-card">
         <h3>Only</h3>
         <p>No Info</p>
       </div>
     </div>
-    <!-- Vlog-style containers end -->
-<footer class="main-footer">
-  <div class="footer-container">
-    <div class="footer-item">
-      <h3>Contact Me</h3>
-      <p>Email: your@email.com</p>
-      <p>Phone: +1234567890</p>
-    </div>
-    <div class="footer-item">
-      <h3>Links</h3>
-      <p>Stay tuned</p>
-    </div>
-    <div class="footer-item">
-      <h3>Platform</h3>
-      <p>Stay tuned</p>
-    </div>
-    <div class="footer-item">
-      <h3>Community</h3>
-      <p>Stay tuned</p>
-    </div>
-    <div class="footer-item">
-      <h3>Follow Me</h3>
-      <p>Stay tuned</p>
-    </div>
-    <div class="footer-item">
-      <h3>Policies</h3>
-      <p>Stay tuned</p>
-    </div>
-  </div>
-</footer>
 
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-item">
+          <h3>Contact Me</h3>
+          <p>Email: your@email.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+        <div class="footer-item">
+          <h3>Links</h3>
+          <p>Stay tuned</p>
+        </div>
+        <div class="footer-item">
+          <h3>Platform</h3>
+          <p>Stay tuned</p>
+        </div>
+        <div class="footer-item">
+          <h3>Community</h3>
+          <p>Stay tuned</p>
+        </div>
+        <div class="footer-item">
+          <h3>Follow Me</h3>
+          <p>Stay tuned</p>
+        </div>
+        <div class="footer-item">
+          <h3>Policies</h3>
+          <p>Stay tuned</p>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <script>
-function toggleMenu() {
-  document.getElementById('dropdownMenu').classList.toggle('show');
-}
-window.onclick = function(event) {
-  if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
-    var dropdown = document.getElementById('dropdownMenu');
-    if (dropdown && dropdown.classList.contains('show')) {
-      dropdown.classList.remove('show');
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
     }
-  }
-}
+    window.onclick = function(event) {
+      if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
+        var dropdown = document.getElementById('dropdownMenu');
+        if (dropdown && dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
+    }
 
-function toggleMode() {
-  const body = document.body;
-  const iconBottom = document.getElementById('modeIconBottom');
-  body.classList.toggle('light-mode');
-  if (body.classList.contains('light-mode')) {
-    if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
-  } else {
-    if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
-  }
-}
+    function toggleMode() {
+      const body = document.body;
+      const iconBottom = document.getElementById('modeIconBottom');
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
+      } else {
+        if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
+      }
+    }
   </script>
 </body>
 </html>
