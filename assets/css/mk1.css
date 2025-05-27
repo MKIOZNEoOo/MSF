@@ -471,24 +471,27 @@ body.dark-mode .logo-text {
 /* =========================
    Dropdown Menu Mode Overrides
    ========================= */
-body.light-mode .dropdown-content {
-  background-color: #111 !important;
-}
-body.light-mode .dropdown-content a {
-  color: #fff !important;
-}
-body.light-mode .dropdown-content a:hover {
-  background-color: #222 !important;
-  color: var(--primary-color) !important;
-}
 
+/* DARK MODE (default) */
 body:not(.light-mode) .dropdown-content {
-  background-color: #fff !important;
+  background-color: #2d0036 !important;
 }
 body:not(.light-mode) .dropdown-content a {
-  color: #222 !important;
+  color: #fff !important;
 }
 body:not(.light-mode) .dropdown-content a:hover {
-  background-color: #f1f1f1 !important;
-  color: var(--primary-color) !important;
+  background-color: #4b006e !important;
+  color: #a259f7 !important;
+}
+
+/* LIGHT MODE */
+body.light-mode .dropdown-content {
+  background-color: #fff !important;
+}
+body.light-mode .dropdown-content a {
+  color: #222 !important;
+}
+body.light-mode .dropdown-content a:hover {
+  background-color: #b3d8fd !important;
+  color: #174ea6 !important;
 }

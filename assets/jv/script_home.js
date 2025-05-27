@@ -1,23 +1,25 @@
 function toggleMenu() {
   document.getElementById('dropdownMenu').classList.toggle('show');
 }
-window.onclick = function(event) {
-  if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
-    var dropdown = document.getElementById('dropdownMenu');
-    if (dropdown && dropdown.classList.contains('show')) {
-      dropdown.classList.remove('show');
-    }
-  }
-}
 
 function toggleMode() {
   const body = document.body;
   const iconBottom = document.getElementById('modeIconBottom');
-  body.classList.toggle('light-mode');
-  if (body.classList.contains('light-mode')) {
-    if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
+  const isLight = body.classList.contains('light-mode');
+  if (isLight) {
+    body.classList.remove('light-mode');
+    body.classList.add('dark-mode');
+    if (iconBottom) {
+      iconBottom.classList.remove('fa-sun');
+      iconBottom.classList.add('fa-moon');
+    }
   } else {
-    if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
+    body.classList.remove('dark-mode');
+    body.classList.add('light-mode');
+    if (iconBottom) {
+      iconBottom.classList.remove('fa-moon');
+      iconBottom.classList.add('fa-sun');
+    }
   }
 }
 
@@ -36,11 +38,26 @@ window.addEventListener('scroll', function() {
   lastScrollY = window.scrollY;
 });
 
-
-// Add toggle effect to header links
-document.querySelectorAll('.menu-toggle-link').forEach(link => {
+// Dropdown click for mobile
+document.querySelectorAll('.dropdown > .header-link').forEach(link => {
   link.addEventListener('click', function(e) {
-    e.preventDefault(); // Prevent navigation for demo; remove if you want navigation
-    toggleMenu();
+    e.preventDefault();
+    const dropdown = this.parentElement;
+    dropdown.querySelector('.dropdown-content').classList.toggle('show');
+    // Close others
+    document.querySelectorAll('.dropdown-content').forEach(dc => {
+      if (dc !== dropdown.querySelector('.dropdown-content')) dc.classList.remove('show');
+    });
   });
+});
+
+// Optional: close dropdowns when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.dropdown') && !e.target.closest('.hamburger')) {
+    document.querySelectorAll('.dropdown-content').forEach(dc => dc.classList.remove('show'));
+    const dropdown = document.getElementById('dropdownMenu');
+    if (dropdown && dropdown.classList.contains('show')) {
+      dropdown.classList.remove('show');
+    }
+  }
 });

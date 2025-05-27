@@ -1,4 +1,4 @@
-document.querySelectorAll('.dropdown > .header-link').forEach(link => {
+    document.querySelectorAll('.dropdown > .header-link').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     const dropdown = this.parentElement;
