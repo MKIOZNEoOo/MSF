@@ -30,3 +30,38 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('sidebarOverlay').classList.remove('show');
   }
 });
+
+function toggleMode() {
+  const body = document.body;
+  const isLight = body.classList.toggle('light-mode');
+  const iconMobile = document.getElementById('modeIconMobile');
+  const labelMobile = document.getElementById('modeLabelMobile');
+  const iconDesktop = document.getElementById('modeIconBottom');
+
+  if (isLight) {
+    if (iconMobile) iconMobile.className = 'fas fa-sun';
+    if (labelMobile) labelMobile.textContent = 'Light Mode';
+    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
+  } else {
+    if (iconMobile) iconMobile.className = 'fas fa-moon';
+    if (labelMobile) labelMobile.textContent = 'Dark Mode';
+    if (iconDesktop) iconDesktop.className = 'fas fa-moon';
+  }
+}
+
+// On page load, set correct label and icon
+document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+  const iconMobile = document.getElementById('modeIconMobile');
+  const labelMobile = document.getElementById('modeLabelMobile');
+  const iconDesktop = document.getElementById('modeIconBottom');
+  if (body.classList.contains('light-mode')) {
+    if (iconMobile) iconMobile.className = 'fas fa-sun';
+    if (labelMobile) labelMobile.textContent = 'Light Mode';
+    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
+  } else {
+    if (iconMobile) iconMobile.className = 'fas fa-moon';
+    if (labelMobile) labelMobile.textContent = 'Dark Mode';
+    if (iconDesktop) iconDesktop.className = 'fas fa-moon';
+  }
+});
