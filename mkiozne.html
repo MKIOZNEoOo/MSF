@@ -93,7 +93,7 @@
     </div>
   </div>
 </footer>
-<!-- ...existing code... -->
+
   </main>
 
   <script>
@@ -110,21 +110,21 @@
   }
 
   function toggleMode() {
-    const body = document.body;
-    const iconTop = document.getElementById('modeIcon');
-    const iconBottom = document.getElementById('modeIconBottom');
-    const modeText = document.getElementById('modeText');
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-      if (iconTop) { iconTop.classList.remove('fa-moon'); iconTop.classList.add('fa-sun'); }
-      if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
-      if (modeText) { modeText.textContent = "Light"; }
-    } else {
-      if (iconTop) { iconTop.classList.remove('fa-sun'); iconTop.classList.add('fa-moon'); }
-      if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
-      if (modeText) { modeText.textContent = "Dark"; }
-    }
+  const body = document.body;
+  const iconTop = document.getElementById('modeIcon');
+  const iconBottom = document.getElementById('modeIconBottom');
+  const modeText = document.getElementById('modeText');
+  body.classList.toggle('light-mode');
+  if (body.classList.contains('light-mode')) {
+    if (iconTop) { iconTop.classList.remove('fa-moon'); iconTop.classList.add('fa-sun'); }
+    if (iconBottom) { iconBottom.classList.remove('fa-moon'); iconBottom.classList.add('fa-sun'); }
+    if (modeText) { modeText.textContent = "Dark"; }
+  } else {
+    if (iconTop) { iconTop.classList.remove('fa-sun'); iconTop.classList.add('fa-moon'); }
+    if (iconBottom) { iconBottom.classList.remove('fa-sun'); iconBottom.classList.add('fa-moon'); }
+    if (modeText) { modeText.textContent = "Light"; }
   }
+}
   </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #367BF0;
+  --primary-color: #81afff;
   --header-bg: #16171d;
-  --header-bg-light: #b3d8fd;
+  --header-bg-light: #FFFDE7; /* super light yellow */
   --header-text: #fff;
-  --dropdown-bg: #fff;
-  --dropdown-link: #222;
-  --dropdown-hover: #f1f1f1;
   --main-bg: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  --main-bg-light: #FFFDE7; /* super light yellow */
+  --text-light: #000;
+  --text-dark: #fff;
 }
 
 * {
@@ -74,6 +74,7 @@ body {
   background: rgba(255,255,255,0.07);
 }
 
+/* Toggle button base style */
 .mode-toggle {
   background: #333;
   border-radius: 20px;
@@ -87,34 +88,24 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 8px;
+  transition: background 0.4s, color 0.4s;
 }
 
-.mode-toggle i {
-  font-size: 1.2em;
-}
-
-.mode-toggle span {
-  margin-left: 6px;
-  font-size: 1em;
+/* Toggle button in light mode: dark background, white text */
+body.light-mode .mode-toggle {
+  background: #111;
   color: #fff;
 }
 
-.mode-toggle::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  width: 24px;
-  height: 24px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.4s ease, background 0.4s ease;
-  z-index: 0;
+/* Toggle button in dark mode: light background, black text */
+body:not(.light-mode) .mode-toggle {
+  background: #fff;
+  color: #222;
 }
 
-body.dark-mode .mode-toggle::before {
-  transform: translateX(30px);
-  background: #222;
+body:not(.light-mode) .mode-toggle span,
+body:not(.light-mode) .mode-toggle i {
+  color: #222;
 }
 
 .hamburger {
@@ -227,12 +218,40 @@ body.dark-mode .logo-text {
 body.dark-mode .vlog-card {
   background: rgba(255, 255, 255, 0.08);
 }
-/* ...existing code... */
+
+/* Toggle menu (dropdown) in light mode: dark */
+body.light-mode .dropdown-content {
+  background-color: #111 !important;
+}
+
+body.light-mode .dropdown-content a {
+  color: #fff !important;
+}
+
+body.light-mode .dropdown-content a:hover {
+  background-color: #222 !important;
+  color: var(--primary-color) !important;
+}
+
+/* Toggle menu (dropdown) in dark mode: light */
+body:not(.light-mode) .dropdown-content {
+  background-color: #fff !important;
+}
+
+body:not(.light-mode) .dropdown-content a {
+  color: #222 !important;
+}
+
+body:not(.light-mode) .dropdown-content a:hover {
+  background-color: #f1f1f1 !important;
+  color: var(--primary-color) !important;
+}
+
 .main-footer {
   width: 100%;
   background: var(--header-bg);
   color: var(--header-text);
-  padding: 40px 0 20px 0;
+  padding: 100px 0 50px 0;
   margin-top: 60px;
 }
 
@@ -263,4 +282,34 @@ body.dark-mode .vlog-card {
   color: #ccc;
   font-size: 0.98em;
 }
-/* ...existing code... */
+
+body.light-mode {
+  --header-bg: var(--header-bg-light);
+  --header-text: var(--text-light);
+  --main-bg: var(--main-bg-light);
+  color: var(--text-light);
+  background: var(--main-bg-light);
+}
+
+body.light-mode .main-header,
+body.light-mode .main-footer {
+  background: var(--header-bg-light);
+  color: var(--text-light);
+}
+
+body.light-mode .logo-text,
+body.light-mode .header-link,
+body.light-mode .footer-item h3,
+body.light-mode .footer-item p {
+  color: var(--text-light);
+}
+
+body.light-mode .vlog-card {
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+}
+
+body.light-mode .header-link:hover {
+  background: rgba(0,0,0,0.07);
+  color: #222;
+}
