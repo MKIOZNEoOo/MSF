@@ -8,54 +8,93 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <div class="title-container">
-  <h1><i class="fas fa-user-secret"></i> MKIOZNE SECRET FILE</h1>
-</div>
-
-
-  <button class="toggle-btn" onclick="toggleLinks()">💛 OPEN SOCIAL MEDIA</button>
-
-  <div class="vlog-links" id="socialLinks">
-    <a href="https://www.facebook.com/" target="_blank">
-      <i class="fab fa-facebook-f"></i> Facebook
-    </a>
-    <a href="https://www.instagram.com/" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://www.youtube.com/" target="_blank">
-      <i class="fab fa-youtube"></i> YouTube
-    </a>
-    <a href="https://github.com/" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://web.telegram.org/" target="_blank">
-      <i class="fab fa-telegram"></i> Telegram
-    </a>
-    <a href="https://linkedin.com/" target="_blank">
-      <i class="fab fa-linkedin-in"></i> LinkedIn
-    </a>
-    
-  </div>
-
-      <button class="toggle-btn" onclick="toggleFiles()">🕵️‍♂️ OPEN SECRET FILES</button>
-    
-    <div class="vlog-links" id="Secret-files">
-    <a href="files/file1.docx" target="_blank">
-      <i class="fas fa-file-word"></i> CREATE PROJECT - FILE 1
-    </a>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo-text">MKIOZNE SECRET FILE</div>
+      <div class="top-right-menu">
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#">Setting</a>
+          <a href="#">Account</a>
+          <a href="#">Profile</a>
+          <a href="#">About</a>
+          <a href="#contact-us">Contact Us</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()" aria-label="Toggle light/dark mode">
+          <i id="modeIcon" class="fas fa-moon"></i>
+        </button>
+      </div>
     </div>
-  
-  
-  <script>
+  </header>
 
-function toggleFiles() {
-      const links = document.getElementById('Secret-files');
-      links.classList.toggle('show');
+  <main>
+    <section class="main-section">
+      <h1>Welcome to Your Secret File</h1>
+      <p>This is a simple, modern landing page inspired by Kali Linux.</p>
+    </section>
+
+   
+      <!-- ...existing code... -->
+    <section class="main-section">
+      <h1>Welcome to Your Secret File</h1>
+      <p>This is a simple, modern landing page inspired by Kali Linux.</p>
+    </section>
+
+    <!-- Vlog-style containers start -->
+    <div class="vlog-cards-container">
+      <!-- Layer 1: About -->
+      <div class="vlog-card">
+        <h3>What is this website about?</h3>
+        <p>This website is a secure and modern platform for storing and managing your secret files, inspired by the aesthetics of Kali Linux.</p>
+      </div>
+      <!-- Layer 2: Source of File -->
+      <div class="vlog-card">
+        <h3>Source of File</h3>
+        <p>All files and resources are managed locally and securely. Source code is available in the GitHub repository for transparency and collaboration.</p>
+      </div>
+      <!-- Layer 3: Only -->
+      <div class="vlog-card">
+        <h3>Only</h3>
+        <p>Access is restricted to authorized users only. Please ensure your credentials are kept safe and private.</p>
+      </div>
+    </div>
+
+ <div id="contact-us" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Email: your@email.com</p>
+      <p>Phone: +1234567890</p>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('dropdownMenu').classList.toggle('show');
+    }
+    window.onclick = function(event) {
+      if (!event.target.matches('.hamburger') && !event.target.closest('.hamburger')) {
+        var dropdown = document.getElementById('dropdownMenu');
+        if (dropdown && dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+        }
+      }
     }
 
-    function toggleLinks() {
-      const links = document.getElementById('socialLinks');
-      links.classList.toggle('show');
+    // Light/Dark mode toggle
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.getElementById('modeIcon');
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
     }
   </script>
 </body>
