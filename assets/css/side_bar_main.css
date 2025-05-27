@@ -17,6 +17,7 @@
   display: flex;
   visibility: hidden;
   opacity: 0;
+  align-items: center; /* Add this line to center children horizontally */
 }
 
 .mobile-sidebar.show {
@@ -25,17 +26,21 @@
   opacity: 1;
 }
 .mobile-sidebar a,
-.mobile-sidebar button.mode-toggle {
+.mobile-sidebar button.mode-toggle,
+.mobile-dropdown-toggle {
   color: var(--header-text, #fff);
   text-decoration: none;
   padding: 16px 32px;
   font-size: 1.1em;
   border: none;
   background: none;
-  text-align: left;
+  text-align: center;      /* Center text inside buttons/links */
+  justify-content: center; /* Center content in flex buttons */
   width: 100%;
   display: block;
   transition: background 0.2s;
+  padding-left: 0;         /* Remove left padding */
+  padding-right: 0;        /* Remove right padding */
 }
 
 .mobile-sidebar a:hover,
@@ -68,4 +73,37 @@
 .sidebar-overlay.show {
   display: block;
   opacity: 1;
+}
+
+.mobile-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(.4,2.08,.55,.44);
+  background: rgba(255,255,255,0.02);
+  padding-left: 16px;
+}
+
+.mobile-dropdown.open .mobile-dropdown-content {
+  max-height: 400px; /* Enough for several links */
+  transition: max-height 0.4s cubic-bezier(.4,2.08,.55,.44);
+}
+
+.mobile-dropdown-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  width: 100%;
+  text-align: center;      /* Center text inside buttons/links */
+  justify-content: center; /* Center content in flex buttons */
+  padding: 16px 32px;
+  font-size: 1.1em;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-dropdown-toggle::after {
+  content: none;
 }

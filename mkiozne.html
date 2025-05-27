@@ -72,11 +72,42 @@
         <div class="mobile-sidebar" id="mobileSidebar">
           <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
           <a href="mkiozne.html">HOME</a>
-          <a href="#">BLOG</a>
-          <a href="#">PLATFORM</a>
-          <a href="#">GET FILE</a>
-          <a href="#">DOCUMENTS</a>
-          <a href="#">OTHERS</a>
+          <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle">BLOG</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">Latest Posts</a>
+      <a href="#">Categories</a>
+    </div>
+  </div>
+          <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle">PLATFORM</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">Windows</a>
+      <a href="#">Linux</a>
+      <a href="#">Mac</a>
+    </div>
+  </div>
+          <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle">GET FILE</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">Download</a>
+      <a href="#">Upload</a>
+    </div>
+  </div>
+          <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle">DOCUMENTS</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">Guides</a>
+      <a href="#">API Docs</a>
+    </div>
+  </div>
+          <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle">OTHERS</button>
+    <div class="mobile-dropdown-content">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
           <!-- Mobile Switch (inside .mobile-sidebar) -->
 <label class="switch mode-toggle mobile-mode-toggle" aria-label="Toggle light/dark mode" style="margin: 24px 32px 0 32px;">
   <input type="checkbox" id="modeSwitchMobile" onchange="toggleMode()" />

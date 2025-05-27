@@ -79,3 +79,11 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
+document.querySelectorAll('.mobile-dropdown-toggle').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevents form submission or link navigation
+    const parent = this.closest('.mobile-dropdown');
+    parent.classList.toggle('open');
+  });
+});
