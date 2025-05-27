@@ -315,6 +315,37 @@ body.dark-mode .vlog-card {
   font-size: 0.98em;
 }
 
+/* Add hover effect for contact links in the footer */
+.footer-item a {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+  color: inherit;
+  padding: 2px 6px;
+}
+
+.footer-item a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s cubic-bezier(.4,2.08,.55,.44);
+}
+
+.footer-item a:hover {
+  color: var(--primary-color);
+  background: rgba(89,153,255,0.08);
+  border-radius: 4px;
+}
+
+.footer-item a:hover::after {
+  width: 100%;
+}
+
 /* =========================
    Light Mode Overrides
    ========================= */
