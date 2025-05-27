@@ -1,25 +1,26 @@
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  left: 0;           /* Set left: 0 */
-  right: auto;        /* Remove right: 0 */
+  right: 0;
+  left: 0;                /* Cover the whole screen */
   bottom: 0;
-  width: 260px;
+  width: 100vw;           /* Full viewport width */
+  height: 100vh;
   background: var(--header-bg, #16171d);
   color: var(--header-text, #fff);
   z-index: 300;
   flex-direction: column;
   padding: 32px 0 0 0;
-  box-shadow: 2px 0 16px rgba(0,0,0,0.2); /* Positive for left side shadow */
-  transition: transform 0.3s;
-  transform: translateX(-100%);           /* Slide in from the left */
+  box-shadow: none;       /* No side shadow needed for full screen */
+  transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+  transform: translateX(100%);   /* Hidden by default */
   display: flex;
   visibility: hidden;
   opacity: 0;
 }
 
 .mobile-sidebar.show {
-  transform: translateX(0);
+  transform: translateX(0);      /* Slide in */
   visibility: visible;
   opacity: 1;
 }

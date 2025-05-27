@@ -115,6 +115,7 @@
   border: none;
   cursor: pointer;
   margin-left: 16px;
+  margin-right: 0;
 }
 
 .hamburger span {
