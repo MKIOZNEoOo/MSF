@@ -31,37 +31,30 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-function toggleMode() {
+function setMode(mode) {
   const body = document.body;
-  const isLight = body.classList.toggle('light-mode');
   const iconMobile = document.getElementById('modeIconMobile');
-  const labelMobile = document.getElementById('modeLabelMobile');
   const iconDesktop = document.getElementById('modeIconBottom');
-
-  if (isLight) {
-    if (iconMobile) iconMobile.className = 'fas fa-sun';
-    if (labelMobile) labelMobile.textContent = 'Light Mode';
-    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
-  } else {
+  if (mode === 'dark') {
+    body.classList.remove('light-mode');
     if (iconMobile) iconMobile.className = 'fas fa-moon';
-    if (labelMobile) labelMobile.textContent = 'Dark Mode';
     if (iconDesktop) iconDesktop.className = 'fas fa-moon';
+  } else {
+    body.classList.add('light-mode');
+    if (iconMobile) iconMobile.className = 'fas fa-sun';
+    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
   }
 }
 
-// On page load, set correct label and icon
+function toggleMode() {
+  const isLight = document.body.classList.toggle('light-mode');
+  const mode = isLight ? 'light' : 'dark';
+  localStorage.setItem('mode', mode);
+  setMode(mode);
+}
+
+// On page load, set mode from localStorage if available
 document.addEventListener('DOMContentLoaded', function() {
-  const body = document.body;
-  const iconMobile = document.getElementById('modeIconMobile');
-  const labelMobile = document.getElementById('modeLabelMobile');
-  const iconDesktop = document.getElementById('modeIconBottom');
-  if (body.classList.contains('light-mode')) {
-    if (iconMobile) iconMobile.className = 'fas fa-sun';
-    if (labelMobile) labelMobile.textContent = 'Light Mode';
-    if (iconDesktop) iconDesktop.className = 'fas fa-sun';
-  } else {
-    if (iconMobile) iconMobile.className = 'fas fa-moon';
-    if (labelMobile) labelMobile.textContent = 'Dark Mode';
-    if (iconDesktop) iconDesktop.className = 'fas fa-moon';
-  }
+  const savedMode = localStorage.getItem('mode') || 'light';
+  setMode(savedMode);
 });
