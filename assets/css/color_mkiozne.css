@@ -495,3 +495,120 @@ body.light-mode .dropdown-content a:hover {
   background-color: #b3d8fd !important;
   color: #174ea6 !important;
 }
+
+/* Add this at the end of your CSS file */
+
+/* Hide hamburger and mobile menu on desktop */
+.hamburger,
+.mobile-menu {
+  display: none;
+}
+
+/* Show desktop menu on desktop */
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 6px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust as needed */
+    right: 10px;
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 16px 0;
+    z-index: 1000;
+  }
+}
+
+/* Hide old mobile menu */
+.mobile-menu { display: none !important; }
+
+/* Sidebar styles */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 240px;
+  height: 100%;
+  background: #222;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0 0 0;
+  transition: right 0.3s;
+  z-index: 2001;
+}
+.mobile-sidebar a {
+  color: #fff;
+  padding: 18px 32px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-bottom: 1px solid #333;
+  transition: background 0.2s;
+}
+.mobile-sidebar a:hover {
+  background: #333;
+}
+.mobile-sidebar .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 2000;
+}
+
+/* Show sidebar and overlay when active */
+.mobile-sidebar.show {
+  right: 0;
+}
+.sidebar-overlay.show {
+  display: block;
+}
+
+/* Responsive: only show hamburger on mobile */
+@media (max-width: 900px) {
+  .desktop-menu { display: none; }
+  .hamburger { display: block; }
+  .mobile-sidebar { display: flex; }
+}
+@media (min-width: 901px) {
+  .mobile-sidebar, .sidebar-overlay { display: none !important; }
+  .hamburger { display: none !important; }
+}
