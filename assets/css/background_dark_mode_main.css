@@ -4,11 +4,3 @@ body.dark-mode {
   animation: animatedGradientDark 16s ease infinite !important;
   color: #fff !important;
 }
-
-@keyframes animatedGradientDark {
-  0% {background-position: 0% 50%;}
-  25% {background-position: 50% 50%;}
-  50% {background-position: 100% 50%;}
-  75% {background-position: 50% 50%;}
-  100% {background-position: 0% 50%;}
-}

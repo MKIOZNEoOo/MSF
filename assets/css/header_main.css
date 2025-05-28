@@ -126,7 +126,20 @@
   background: var(--header-text, #fff);
   margin: 4px 0;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: 0.4s cubic-bezier(.4,2.08,.55,.44);
+  position: relative;
+}
+
+/* Animate to X when active */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-24px);
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Responsive: show hamburger, hide desktop menu on small screens */
@@ -258,4 +271,8 @@ body.light-mode .main-header * {
   body.dark-mode .mobile-sidebar {
     background: #16171d !important; /* keep black/dark in dark mode */
   }
+}
+
+body.light-mode .hamburger span {
+  background: #fff !important;
 }

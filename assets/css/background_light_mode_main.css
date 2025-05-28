@@ -32,14 +32,6 @@ body.light-mode {
   color: #222;
 }
 
-@keyframes animatedGradientLight {
-  0% {background-position: 0% 50%;}
-  25% {background-position: 50% 50%;}
-  50% {background-position: 100% 50%;}
-  75% {background-position: 50% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
 body.dark-mode {
   --header-bg: #16171d;
   --header-text: #fff;

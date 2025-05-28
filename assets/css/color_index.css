@@ -127,14 +127,3 @@ body, html {
 #enterButton:hover::before {
   opacity: 1;
 }
-
-@keyframes neonPulse {
-  0% {
-    filter: blur(15px);
-    opacity: 0.3;
-  }
-  100% {
-    filter: blur(40px);
-    opacity: 1;
-  }
-}

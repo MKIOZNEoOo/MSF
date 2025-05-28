@@ -1,8 +1,15 @@
 function toggleMenu() {
   const sidebar = document.getElementById('mobileSidebar');
   const overlay = document.getElementById('sidebarOverlay');
-  sidebar.classList.toggle('show');
-  overlay.classList.toggle('show');
+  const hamburger = document.getElementById('hamburgerBtn');
+  const isOpen = sidebar.classList.toggle('open');
+  overlay.style.display = isOpen ? 'block' : 'none';
+  // Toggle hamburger animation
+  if (isOpen) {
+    hamburger.classList.add('active');
+  } else {
+    hamburger.classList.remove('active');
+  }
 }
 
 function setMode(mode) {
