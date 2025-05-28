@@ -57,6 +57,11 @@ body.dark-mode .vlog-card {
 body.light-mode .video-content-box {
   background: #ffffff;
   color: #000000;
+  border: 2px solid #a18cd1; /* Light purple border */
+  box-shadow:
+    0 0 16px 4px #a18cd1,
+    0 0 32px 8px #5999ff33,
+    0 4px 32px rgba(89,153,255,0.15); /* Glowing effect: purple and blue */
 }
 
 /* Dark mode: black box, white text */
