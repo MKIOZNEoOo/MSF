@@ -32,7 +32,8 @@
   font-size: 1.5em;
   font-weight: bold;
   letter-spacing: 2px;
-  color: var(--primary-color, #5999ff);
+  color: var(--header-text, #fff);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .top-right-menu {
