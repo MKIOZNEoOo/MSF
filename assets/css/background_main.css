@@ -25,6 +25,7 @@ body.light-mode {
   --header-bg: #e3f0ff;
   --header-text: #222;
   --primary-color: #5999ff;
+  --header-bg-light: #e3f0ff;
   background: linear-gradient(135deg, #abd2ff 0%, #44a1ff 100%);
   color: #222;
 }
