@@ -128,7 +128,7 @@ body.dark-mode .video-content-box {
   }
 }
 
-.section-top-border {
+.section--border {
   width: 100vw;           /* Full viewport width */
   height: 3px;
   background: #000000;    /* Or your preferred color */
@@ -148,5 +148,10 @@ body.light-mode .video-content-box .video-description *,
 body.light-mode .video-content-box .video-description h2,
 body.light-mode .video-content-box .video-description p {
   color: #111 !important;
+}
+
+body.light-mode .hero-title {
+  color: #ffffff !important;
+  text-shadow: none !important;
 }
 

@@ -1,0 +1,14 @@
+body.dark-mode {
+  background: linear-gradient(270deg, #23243a, #3a1c2f, #2d0b2f, #23243a) !important;
+  background-size: 1000% 1000% !important;
+  animation: animatedGradientDark 16s ease infinite !important;
+  color: #fff !important;
+}
+
+@keyframes animatedGradientDark {
+  0% {background-position: 0% 50%;}
+  25% {background-position: 50% 50%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 50%;}
+  100% {background-position: 0% 50%;}
+}

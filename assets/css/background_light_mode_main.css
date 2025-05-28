@@ -26,8 +26,18 @@ body.light-mode {
   --header-text: #222;
   --primary-color: #5999ff;
   --header-bg-light: #e3f0ff;
-  background: linear-gradient(135deg, #abd2ff 0%, #44a1ff 100%);
+  background: linear-gradient(270deg, #a18cd1, #f5576c, #5ee7df, #4a90e2, #a18cd1);
+  background-size: 1000% 1000%;
+  animation: animatedGradientLight 16s ease infinite;
   color: #222;
+}
+
+@keyframes animatedGradientLight {
+  0% {background-position: 0% 50%;}
+  25% {background-position: 50% 50%;}
+  50% {background-position: 100% 50%;}
+  75% {background-position: 50% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
 body.dark-mode {

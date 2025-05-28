@@ -1,0 +1,21 @@
+.main-section {
+  background: #000;
+}
+
+.section-bottom-border {
+  width: 100vw;
+  height: 3px;
+  background: #5999ff;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 40px;
+  margin-bottom: 0;
+  border-radius: 2px;
+}
+
+.next-section {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* Tanggalin ang mga extra o duplicate na .section-bottom-border kung meron pa sa HTML mo.
+   Siguraduhin na isa lang ang <div class="section-bottom-border"></div> sa tamang pwesto. */
