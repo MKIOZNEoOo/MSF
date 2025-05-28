@@ -10,6 +10,7 @@
   justify-content: center;
   margin-top: 0;
   text-align: center;
+  background: #000;      /* Add black background */
 }
 
 .main-section h1 {
@@ -134,5 +135,18 @@ body.dark-mode .video-content-box {
   margin-left: calc(-50vw + 50%);
   margin-bottom: 24px;
   border-radius: 2px;
+}
+
+body.light-mode .main-section > h1,
+body.light-mode .main-section > p {
+  color: #fff !important;
+}
+
+/* Make the video description text black in light mode */
+body.light-mode .video-content-box .video-description,
+body.light-mode .video-content-box .video-description *,
+body.light-mode .video-content-box .video-description h2,
+body.light-mode .video-content-box .video-description p {
+  color: #111 !important;
 }
 
