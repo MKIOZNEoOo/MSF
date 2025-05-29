@@ -7,6 +7,8 @@
   color: var(--header-text);
   padding: 100px 0 50px 0;
   min-height: 50px;
+  margin-top: 2000px; /* Add this line or increase the value */
+
 }
 
 .footer-container {
