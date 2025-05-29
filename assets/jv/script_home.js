@@ -101,3 +101,4 @@ function scrollToNextSection() {
     nextSection.scrollIntoView({ behavior: 'smooth' });
   }
 }
+

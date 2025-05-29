@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/side_bar_main.css">
   <link rel="stylesheet" href="assets/css/line_main.css">
   <link rel="stylesheet" href="assets/css/animaiton_main.css">
+  <link rel="stylesheet" href="assets/css/scrolling_main.css">
+  
   <style>
 
   </style>
@@ -164,9 +166,9 @@
     
     </section>
 
-    
-
-    <div class="vlog-cards-container" style="margin-top:120px;">
+    <!-- Add this wrapper -->
+    <div class="snap-scroll-wrapper">
+      <div class="vlog-cards-container black-bg" style="margin-top:120px;">
   <div class="vlog-cards-header">
     HELLO JETHRO, THIS IS MY SECRET FILE.
   </div>
@@ -183,13 +185,13 @@
     <p>No Info</p>
   </div>
 </div>
-
+      <div class="vlog-cards-container" id="first-vlog-section" style="margin-top:120px;"></div>
 <div class="vlog-card-divider"></div>
 
 
 <div class="vlog-cards-container" style="margin-top:120px;">
   <div class="vlog-cards-header">
-    HELLO JETHRO, THIS IS MY SECRET FILE.
+    HELLO MKIOZNEジ, THIS IS MY SECRET FILE.
   </div>
   <div class="vlog-card">
     <h3>What is this website about?</h3>
@@ -213,10 +215,10 @@
     HELLO JETHRO, THIS IS MY SECRET FILE.
   </div>
   <!-- ... -->
-
-
-    <div style="height: 200px;"></div>
-<footer class="main-footer">
+</div>
+    </div>
+  </main>
+  <footer class="main-footer">
       <div class="footer-container">
         <div class="footer-item">
           <h3>Links</h3>
@@ -250,7 +252,6 @@
         </div>
       </div>
     </footer>
-  </main>
   <script src="assets/jv/script_home.js"></script>
   <script src="assets/jv/design.js"></script>
 </body>
