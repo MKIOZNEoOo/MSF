@@ -1,11 +1,12 @@
 .vlog-cards-container.black-bg {
   background: #a3a3a3;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 0 500px 0 !important; /* Added bottom padding */
   width: 100vw;
   max-width: 100vw;
   border-radius: 0;
-  bottom
+  ;
+
 }
 
 .vlog-cards-container.black-bg > .vlog-cards-header,
