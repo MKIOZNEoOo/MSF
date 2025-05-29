@@ -176,15 +176,10 @@ body.light-mode .hero-title {
   letter-spacing: 1px;
   margin-top: 16px;
   padding-top: 10px;
-  
+  color: #fff;
 }
 
-.vlog-cards-header h2 {
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-  margin: 0;
-  padding: 0;
-}
+
 
 
 .vlog-cards-divider {
