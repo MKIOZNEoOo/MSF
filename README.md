@@ -1,6 +1,6 @@
 # Welcome to My Project 👋
 
-![Hacker](asset/hacker.gif)
+![Hacker](assets/hacker.gif)
 
 # [MK - Secret - files] 
  Codes | Geek | Guide | Debug | Advance 
