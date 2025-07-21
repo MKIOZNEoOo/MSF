@@ -26,7 +26,7 @@ body.light-mode {
   --header-text: #222;
   --primary-color: #5999ff;
   --header-bg-light: #e3f0ff;
-  background: linear-gradient(270deg, #6d5eac, #b0415c, #3a6ea5, #6d5eac);
+  background: #4c5f77;
   background-size: 1000% 1000%;
   animation: animatedGradientLight 16s ease infinite;
   color: #222;

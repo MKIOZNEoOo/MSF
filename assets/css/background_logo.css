@@ -3,22 +3,39 @@
   overflow: hidden;
 }
 
-.hero-section::before {
+/* Dark mode background logo */
+body.dark-mode .hero-section::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;       /* ✅ adjust size of logo */
+  width: 500px;
   height: 500px;
   background: url('../hacker1.gif') no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  opacity: 0.2;        /* ✅ transparency so MKIOZNE text is visible */
+  opacity: 0.4;
   z-index: 0;
   pointer-events: none;
 }
 
-/* Make sure MKIOZNE text appears above logo */
+/* Light mode background logo */
+body.light-mode .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: url('../hacker1.gif') no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: .5;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep MKIOZNE text above logo */
 .hero-title {
   position: relative;
   z-index: 1;

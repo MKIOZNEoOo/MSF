@@ -58,3 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const savedMode = localStorage.getItem('mode') || 'light';
   setMode(savedMode);
 }); 
+
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("light-mode");
+}
