@@ -95,6 +95,19 @@
   color: #fff;
 }
 
+body.light-mode .dropdown-content a {
+  color: #000 !important; /* or any readable color like #222 */
+}
+
+body.light-mode .dropdown-content {
+  background-color: #f0f0f0 !important; /* optional: change background too */
+}
+body.light-mode .dropdown-content a:hover {
+  background-color: #dcdcdc; /* optional: hover effect */
+  color: #000 !important;
+}
+
+
 .dropdown {
   position: relative;
   display: inline-block;
