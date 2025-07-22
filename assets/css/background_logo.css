@@ -8,8 +8,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;       /* ✅ adjust size of logo */
-  height: 300px;
+  width: 500px;       /* ✅ adjust size of logo */
+  height: 500px;
   background: url('../hacker1.gif') no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
