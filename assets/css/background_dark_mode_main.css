@@ -1,8 +1,0 @@
-body.dark-mode {
-  background: linear-gradient(270deg, #23243a, #3a1c2f, #2d0b2f, #23243a) !important;
-  background-size: 1000% 1000% !important;
-  animation: animatedGradientDark 16s ease infinite !important;
-  color: #fff !important;
-}
-
-background: url('https://github.com/MKIOZNExFILE/MSF/assets/hacker1.gif') no-repeat center center;
