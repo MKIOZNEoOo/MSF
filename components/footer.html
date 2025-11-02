@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Elementary Frizzy Grasshopper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--color-on-surface);
+        background: var(--color-surface);
+
+        fill: var(--color-on-surface);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="../style.css" />
+    <div>
+      <link href="./footer.css" rel="stylesheet" />
+      <div class="footer-container1">
+        <footer class="footer">
+          <div class="footer-wave-divider">
+            <svg
+              viewBox="0 0 1200 120"
+              xmlns="http://www.w3.org/2000/svg"
+              class="footer-wave"
+            >
+              <path
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                opacity=".25"
+              ></path>
+              <path
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                opacity=".5"
+              ></path>
+              <path
+                d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              ></path>
+            </svg>
+          </div>
+          <div class="footer-container">
+            <div class="footer-top">
+              <div class="footer-brand">
+                <div class="footer-logo">
+                  <div class="footer-logo-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829zM2.5 21.5l1.4-1.4M20.1 3.9l1.4-1.4M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829zM9.6 14.4l4.8-4.8"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="footer-logo-text">
+                    <h3 class="footer-brand-name">FitNest Studio</h3>
+                    <p class="footer-brand-tagline">
+                      Transform Your Body, Elevate Your Life
+                    </p>
+                  </div>
+                </div>
+                <p class="footer-brand-description">
+                  Join our boutique fitness community for small-group strength
+                  training, yoga, and personalized coaching. No long-term
+                  contracts, just results-driven fitness.
+                </p>
+                <div class="footer-social">
+                  <a href="#">
+                    <div
+                      aria-label="Follow us on Instagram"
+                      class="footer-social-link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <rect
+                            width="20"
+                            height="20"
+                            x="2"
+                            y="2"
+                            rx="5"
+                            ry="5"
+                          ></rect>
+                          <path
+                            d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="Follow us on Facebook"
+                      class="footer-social-link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div
+                      aria-label="Subscribe to our YouTube"
+                      class="footer-social-link"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="M2.5 17a24.1 24.1 0 0 1 0-10a2 2 0 0 1 1.4-1.4a49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10a2 2 0 0 1-1.4 1.4a49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"
+                          ></path>
+                          <path d="m10 15l5-3l-5-3z"></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-links">
+                <div class="footer-column">
+                  <h4 class="footer-column-title">Programs</h4>
+                  <ul class="footer-link-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Strength Training</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>Yoga Classes</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Personal Training</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Small Group Sessions</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Intro Sessions</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-column">
+                  <h4 class="footer-column-title">Membership</h4>
+                  <ul class="footer-link-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>Class Packs</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Monthly Plans</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Drop-in Classes</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Book a Session</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Member Portal</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-column">
+                  <h4 class="footer-column-title">Studio</h4>
+                  <ul class="footer-link-list">
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>About Us</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link"><span>Our Coaches</span></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Facility Tour</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Success Stories</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="footer-link">
+                          <span>Community Events</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer-contact">
+                <h4 class="footer-column-title">Get In Touch</h4>
+                <div class="footer-contact-info">
+                  <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        ></circle>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-details">
+                      <span class="footer-contact-text">
+                        <span>123 Fitness Avenue</span>
+                        <br />
+                        <span>Downtown District, City 12345</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-details">
+                      <a href="tel:+1234567890">
+                        <div class="footer-contact-link">
+                          <span>(123) 456-7890</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path
+                            d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                          ></path>
+                          <rect
+                            width="20"
+                            height="16"
+                            x="2"
+                            y="4"
+                            rx="2"
+                          ></rect>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-details">
+                      <a href="mailto:hello@fitneststudio.com?subject=">
+                        <div class="footer-contact-link">
+                          <span>hello@fitneststudio.com</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="footer-contact-item">
+                    <div class="footer-contact-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                      >
+                        <g
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        >
+                          <path d="M12 6v6l4 2"></path>
+                          <circle cx="12" cy="12" r="10"></circle>
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="footer-contact-details">
+                      <span class="footer-contact-text">
+                        <span>Mon-Fri: 6AM - 9PM</span>
+                        <br />
+                        <span>Sat-Sun: 8AM - 6PM</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-newsletter">
+                  <h5 class="footer-newsletter-title">Stay Motivated</h5>
+                  <p class="footer-newsletter-text">
+                    Get fitness tips and studio updates
+                  </p>
+                  <form id="newsletter-form" class="footer-newsletter-form">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      required="true"
+                      class="footer-newsletter-input"
+                    />
+                    <button
+                      type="submit"
+                      class="footer-newsletter-button btn btn-primary"
+                    >
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-bottom-left">
+                <p class="footer-copyright">
+                  © 2025 FitNest Studio. All rights reserved.
+                </p>
+                <div class="footer-legal-links">
+                  <a href="#">
+                    <div class="footer-legal-link">
+                      <span>Privacy Policy</span>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="footer-legal-link">
+                      <span>Terms of Service</span>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="footer-legal-link">
+                      <span>Cookie Policy</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="footer-bottom-right">
+                <p class="footer-location">
+                  Proudly serving the Downtown District community
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div class="footer-container2">
+          <div class="footer-container3">
+            <script defer="" data-name="footer">
+              document.addEventListener('DOMContentLoaded', function() {
+                (function(){
+                  const newsletterForm = document.getElementById("newsletter-form")
+
+                  if (newsletterForm) {
+                    newsletterForm.addEventListener("submit", function (e) {
+                      e.preventDefault()
+
+                      const input = this.querySelector(".footer-newsletter-input")
+                      const button = this.querySelector(".footer-newsletter-button")
+
+                      if (input.value.trim() === "") {
+                        input.focus()
+                        return
+                      }
+
+                      // Store original button text
+                      const originalText = button.textContent
+
+                      // Update button state
+                      button.textContent = "Subscribed!"
+                      button.disabled = true
+                      button.style.background = "var(--color-accent)"
+
+                      // Clear input
+                      input.value = ""
+
+                      // Reset button after 3 seconds
+                      setTimeout(() => {
+                        button.textContent = originalText
+                        button.disabled = false
+                        button.style.background = ""
+                      }, 3000)
+                    })
+                  }
+
+                  // Enhanced social link interactions
+                  const socialLinks = document.querySelectorAll(".footer-social-link")
+                  socialLinks.forEach((link) => {
+                    link.addEventListener("mouseenter", function () {
+                      this.style.transform = "translateY(-6px) scale(1.15) rotate(5deg)"
+                    })
+
+                    link.addEventListener("mouseleave", function () {
+                      this.style.transform = "translateY(0) scale(1) rotate(0deg)"
+                    })
+                  })
+
+                  // Enhanced footer link animations
+                  const footerLinks = document.querySelectorAll(".footer-link")
+                  footerLinks.forEach((link) => {
+                    link.addEventListener("mouseenter", function () {
+                      this.style.paddingLeft = "var(--spacing-md)"
+                    })
+
+                    link.addEventListener("mouseleave", function () {
+                      this.style.paddingLeft = "var(--spacing-sm)"
+                    })
+                  })
+
+                  // Logo icon hover animation enhancement
+                  const logoIcon = document.querySelector(".footer-logo-icon")
+                  if (logoIcon) {
+                    logoIcon.addEventListener("mouseenter", function () {
+                      this.style.animationName = "logoSpin"
+                      this.style.animationDuration = "0.6s"
+                      this.style.animationTimingFunction = "var(--animation-curve-primary)"
+                    })
+
+                    logoIcon.addEventListener("mouseleave", function () {
+                      this.style.animation = "none"
+                    })
+                  }
+
+                  // Add custom keyframe animation
+                  const style = document.createElement("style")
+                  style.textContent = `
+                  @keyframes logoSpin {
+                    0% { transform: scale(1) rotate(0deg); }
+                    50% { transform: scale(1.1) rotate(180deg); }
+                    100% { transform: scale(1.05) rotate(360deg); }
+                  }
+                `
+                  document.head.appendChild(style)
+                })()
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
