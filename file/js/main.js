@@ -17,9 +17,9 @@
   }
 
   // use fixed relative paths that match your repo layout
-  const webmPath = 'file/background/logo_video.webm';
-  const mp4Path  = 'file/background/logo_video.mp4';
-  const posterPath = 'file/background/logo.png';
+  const webmPath = 'mkweb/file/background/logo_video.webm';
+  const mp4Path  = 'mkweb/file/background/logo_video.mp4';
+  const posterPath = 'mkweb/file/background/logo.png';
 
   // set poster
   vid.poster = posterPath;
