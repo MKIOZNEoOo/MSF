@@ -321,3 +321,70 @@ nav a:hover:after {
   }
   .hero-card:before { display: none; }
 }
+
+/* --- Mobile Sidebar Menu --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animate the X when active */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Sidebar nav */
+nav {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 240px;
+    background: rgba(8,10,18,0.95);
+    backdrop-filter: blur(8px);
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    box-shadow: -8px 0 24px rgba(0,0,0,0.4);
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
