@@ -324,13 +324,16 @@ nav a:hover:after {
 
 /* --- Mobile Sidebar Menu --- */
 .menu-toggle {
-  display: none;
+  display: none; /* desktop hidden; shown on small screens below */
+  position: absolute;
+  right: 1rem;
+  top: 0.9rem;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 20px;
+  width: 32px;
+  height: 22px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 200; /* above header/nav */
 }
 
 .menu-toggle span {
@@ -359,32 +362,51 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Slide-in panel from the right: full viewport height, limited width */
   nav {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
-    width: 240px;
-    background: rgba(8,10,18,0.95);
+    height: 100vh;             /* full viewport height */
+    width: 85vw;               /* cover most of the screen on small devices */
+    max-width: 360px;          /* don't exceed a comfortable width on tablets */
+    background: rgba(8,10,18,0.98);
     backdrop-filter: blur(8px);
-    transform: translateX(100%);
+    transform: translateX(110%); /* start off-screen to the right */
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 90;
-    box-shadow: -8px 0 24px rgba(0,0,0,0.4);
+    align-items: flex-start;
+    padding-top: 5.5rem;       /* push items below the header area */
+    z-index: 180;              /* above header but below toggle if needed */
+    box-shadow: -12px 0 40px rgba(0,0,0,0.5);
+    transition: transform 0.35s cubic-bezier(.2,.9,.2,1);
   }
 
+  /* When active, slide all the way into view */
   nav.active {
     transform: translateX(0);
   }
 
+  /* Adjust the ul inside the panel for vertical layout */
   nav ul {
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 1.6rem;
+    align-items: flex-start;
+    padding-left: 2rem;
   }
 
-  .menu-toggle {
-    display: flex;
+  nav ul li a {
+    font-size: 1.02rem;
+    padding: 8px 0;
+    display: inline-block;
+  }
+
+  /* Keep the header visible above page but allow nav to overlay it */
+  header {
+    z-index: 160;
   }
 }
