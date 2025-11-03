@@ -69,6 +69,8 @@ nav a:hover {
   width: 200px;
   margin-bottom: 1.5rem;
   filter: drop-shadow(0 0 10px #00b4d8);
+  background: transparent;
+  mix-blend-mode: multiply;
 }
 
 .hero h1 {
