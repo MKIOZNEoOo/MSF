@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,12 +28,14 @@
 
     <section class="hero" aria-labelledby="hero-heading">
       <!-- large left logo (keeps visual identity) -->
-      <video class="hero-logo" autoplay muted loop playsinline poster="logo.png" aria-label="MK logo">
-        <source src="/file/background/logo_video.webm" type="video/webm" />
-        <source src="/file/background/logo_video.mp4" type="video/mp4" />
-        <!-- fallback image if video is not supported -->
-        <img src="/file/background/logo.png" alt="MK logo" class="hero-logo" />
-      </video>
+      <div class="hero-logo"> <!-- container for styling -->
+        <video autoplay muted loop playsinline poster="file/background/logo.png" aria-label="MK logo">
+          <source src="file/background/logo_video.webm" type="video/webm" />
+          <source src="file/background/logo_video.mp4" type="video/mp4" />
+          <!-- fallback image if video not supported -->
+          <img src="file/background/logo.png" alt="MK logo" />
+        </video>
+      </div>
 
       <div class="hero-content">
         <!-- new frosted glass card for the text -->
