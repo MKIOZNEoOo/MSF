@@ -32,6 +32,7 @@
   while (vid.firstChild) vid.removeChild(vid.firstChild);
 
   // create sources (prefer webm then mp4)
+  
   const s1 = document.createElement('source');
   s1.src = webmPath;
   s1.type = 'video/webm';
